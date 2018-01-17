@@ -1,0 +1,41 @@
+{
+    "images":[
+        {
+            "img": "GoldenGate.JPG",
+            "title": "Golden Gate Bridge",
+            "caption": "The Magnificent, Wonderful, Jaw Dropping, Awe Inspirating, Sensational, Beauty. The Golden Gate Bridge. "
+        },{
+            "img": "FountainPen.jpg",
+            "title": "My Fountain Pen",
+            "caption": "Somehow am addicted to this pen.\n\n #lamy #fountainpen #iroshizuku #pen #ink #style #edc #scribble"
+        },{
+            "img": "FrozenLake.jpg",
+            "title": "Frozen Lake",
+            "caption": "Blizzard + lake = Frozen waves!? So magical!"
+        },{
+            "img": "Christmas.jpg",
+            "title": "Beautiful Orniments",
+            "caption": "Christmas time brings out some wacky ornaments. I'll still enjoy the plain and traditional ones. Merry Christmas and Happy Holidays!"
+        },{
+            "img": "Watch.jpg",
+            "title": "Watch",
+            "caption": "It's something that doesn't wait for you, but won't let you down. Its always on the sidelines but runs your entire life. Time is one of the most underestimated things."
+        },{
+            "img": "",
+            "title": "",
+            "caption": ""
+        },{
+            "img": "",
+            "title": "",
+            "caption": ""
+        },{
+            "img": "",
+            "title": "",
+            "caption": ""
+        },{
+            "img": "",
+            "title": "",
+            "caption": ""
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+mixin icon(id)
+    svg.icon
+        use(xlink:href="../images/open-iconic.svg##{id}")
+
+mixin fscloseicon()
+    a(href="/gallery")
+        svg.icon
+            use(xlink:href="../images/open-iconic.svg#fullscreen-exit")
+
+mixin fsicon(id)
+    a(href="/gallery/#{id}")
+        svg.icon.fullscreen-enter
+            use(xlink:href="../images/open-iconic.svg#fullscreen-enter")
+
+mixin imageList(imgList, imageID)
+    - var insertImage = function(imgList, imageID){return imgList.imgList[imageID.imageID];}
+    img(src="../images/gallery/#{insertImage(imgList, imageID)}", alt="#{insertImage(imgList, imageID)}")
+
+mixin Content(imgList, imageID, imageContent)
+    - var index = 0;
+    - var imgname = imgList.imgList[imageID.imageID];
+    - for (var i = 0; i < imageContent.imageContent.length; i++) if(imageContent.imageContent[i].img == imgname) index = i;
+    - var imgTitle = imageContent.imageContent[index].title;
+    - var imgCaption = imageContent.imageContent[index].caption;
+    h2.card-title #{imgTitle}
+    p.card-text #{imgCaption}
+
+extend layout
+
+block js
+    script(type='text/javascript').
+        var imageID = !{imageID};
+        var imgList = !{JSON.stringify(imgList)};
+        var galContent = !{JSON.stringify(imageContent)};
+
+block content
+    div#content.col-12
+        #fullscreen
+            +imageList({imgList}, {imageID})
+            .caption
+                +fscloseicon()
+                +Content({imgList}, {imageID}, {imageContent})

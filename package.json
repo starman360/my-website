@@ -1,0 +1,17 @@
+{
+  "name": "MySite",
+  "version": "0.0.1",
+  "private": "true",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "express": "3.0.0alpha4",
+    "fs": "0.0.1-security",
+    "imports-loader": "^0.7.1",
+    "jade": "^1.11.0",
+    "jquery": "^2.2.4",
+    "malihu-custom-scrollbar-plugin": "^3.1.5",
+    "nib": "^1.1.2",
+    "open-iconic": "^1.1.1",
+    "stylus": "^0.54.5"
+  }
+}

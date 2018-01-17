@@ -1,0 +1,197 @@
+@import 'nib'
+@import url('http://fonts.googleapis.com/css?family=Quicksand')
+@import 'fonts'
+global-reset()
+
+keyframe-name = spin
+cgrey = #dcdcdc
+cdarkgrey = #0f0f0f
+
+body
+    font-family Gotham
+    font-weight 200
+
+h1,h2,h3,h4.h5
+    font-weight bold
+
+nav
+    position fixed
+    background-color cdarkgrey
+    width 300px
+    height 100vh
+    color white
+    top 0
+    left -275px
+
+    .left
+        width 280px
+
+        ul
+            margin 0px 20px
+        
+            li
+                list-style-type none
+                padding 20px 0px
+                border solid cdarkgrey 0.5px
+                transition: border 0.25s ease-in-out;
+                
+                &:hover
+                    border-top solid #FFFFFF 0.5px
+                    border-bottom solid #FFFFFF 0.5px
+
+                &:before
+                    content url("../images/x.png")
+                    display:inline-block;
+                    margin-right 20px
+                    
+                    ^[-1]:hover^[4..4]
+                       animation:keyframe-name 3s linear infinite
+                       
+                a
+                    color: #FFFFFF;
+                    text-decoration: none;
+
+        .navitems
+            width 100%
+            text-transform uppercase
+            font-size 0.8em
+            text-decoration none
+
+        #logo
+            height 30vh
+            text-align center
+            vertical-align middle
+            line-height 30vh
+            text-transform inherit
+            font-size 1em
+
+    .right
+        width 20px
+        padding-top calc(50vh - 80px)
+
+
+        p 
+            writing-mode vertical-rl
+            text-orientation upright
+            cursor default
+            
+
+    & > *
+        height 100vh
+        float left
+        
+#scroll
+    position fixed
+    right 0px
+    top 0px
+    height 100vh
+    width 20px
+    
+
+
+#content
+    padding-left 25px
+    padding-right 0px
+    margin 0
+    height 100vh
+
+    #fullscreen
+        position fixed
+        width 100vw
+        height 100vh
+        background-color rgba(0,0,0,0.5)
+        z-index 1
+
+        img
+            max-width 50vw
+            max-height 80vh
+            position absolute
+            top 50%
+            left calc(25% - 150px)
+            transform translateY(-50%)
+
+        .caption
+            width 300px
+            position absolute
+            top 50%
+            right calc(25% - 150px)
+            transform translateY(-50%)
+            background-color white
+            padding 50px             
+            
+            p 
+                word-wrap break-word
+
+    .pxbcg
+        background-position center center
+        background-repeat no-repeat
+        background-attachment fixed
+        background-size cover
+        height 100%
+        width 100%
+
+        #slide1 ^[1..1]
+            background-color grey
+
+
+    .pxcontainer 
+        width 100%
+        height 100%
+        position relative
+
+        .row > div
+            padding 50px
+
+    .pxcontext
+        position absolute
+        padding 20px
+        
+    .px
+        height 100vh
+
+    img#main
+        width 100%
+        object-fit cover
+
+    .galleryTile img
+        height 100%
+        object-fit cover
+
+svg
+    block
+
+.icon
+    width 8px
+    height @width
+    background-size: 100% auto
+    zoom 200%
+
+    nav ^[0..0]
+        fill: #FFFFFF
+        margin 10px 0px
+
+    .card ^[0..0]
+        padding 2px 10px 10px 2px
+        position absolute
+        right 3px
+        top 3px
+
+    .caption ^[0..0]
+        padding 2px 10px 10px 2px
+        position absolute
+        right 23px
+        top 23px
+
+.hidden
+    display none
+
+.icon2x
+    width 32px
+    height 32px
+
+.shadowBox
+    box-shadow 0px 0px 6px #ccc
+
+@keyframes keyframe-name
+    100%
+        transform rotate(360deg)

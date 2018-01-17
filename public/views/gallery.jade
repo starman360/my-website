@@ -1,0 +1,46 @@
+mixin icon(id)
+    svg.icon
+        use(xlink:href="../images/open-iconic.svg##{id}")
+
+mixin fsicon(id)
+    a(href="/gallery/#{id}")
+        svg.icon.fullscreen-enter
+            use(xlink:href="../images/open-iconic.svg#fullscreen-enter")
+
+mixin insertSlide(id)
+    - var slidenum = function(id){return "slide" + id};
+    section.px(id="#{slidenum(id)}")
+        .pxbcg
+            .pxcontainer
+                .pxcontext
+
+mixin tile(imageName, i)
+    .galleryTile.col-3
+        .card
+            img(src="../images/gallery/#{imageName}", alt="Card image cap").card-img-top
+            +fsicon(i)
+
+
+extend layout
+block js
+    script(type='text/javascript').
+        var imgList = !{JSON.stringify(imgList)};
+
+block content
+    div#content.col-12
+         section#slide2.px
+            .pxbcg
+                .pxcontainer
+                    .pxcontext
+                        h1 Gallery
+        section#slide2.px
+            .pxbcg
+                .pxcontainer
+                    .pxcontext
+                        .container-fluid
+                            .row      
+                                each img, i in imgList
+                                    +tile(img,i)
+                                else
+                                    p Hello
+        
