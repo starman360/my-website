@@ -286,6 +286,32 @@ nav > * {
   height: 100%;
   object-fit: cover;
 }
+#content #slide1 {
+  height: calc(50vh + 170px);
+}
+#content #slide1 .pxcontext {
+  width: 100%;
+}
+#content #slide1 .profilepic {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+#content #slide1 .profilepic img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 100px;
+  border: 2px #fff solid;
+}
+#content #slide1 h1 {
+  font-weight: 200;
+  font-size: 3em;
+  margin-bottom: 30px;
+}
+#content #slide2 {
+  height: 100vh;
+}
 .icon {
   width: 8px;
   height: 8px;

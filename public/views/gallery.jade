@@ -28,15 +28,23 @@ block js
 
 block content
     div#content.col-12
-         section#slide2.px
+        section#slide1
             .pxbcg
                 .pxcontainer
-                    .pxcontext
-                        h1 Gallery
+                    .pxcontext(data-start="bottom: 0px;",data-end="bottom: 1000px;",
+                    data-anchor-target="#slide1")
+                        .container-fluid
+                            .row.justify-content-around
+                                .col-3
+                                    .profilepic
+                                        img(src="../images/Me.jpg", alt="Me")
+                                .col-6 
+                                    h1 Gallery
+                                    p There are an infinite amount of paths not taken. I took this one. This is what I saw and therefore what makes me, me
         section#slide2.px
             .pxbcg
                 .pxcontainer
-                    .pxcontext
+                    .pxcontext(data-start="top: 50%;",data-center-top="top: 0px;",data-anchor-target="#slide2")
                         .container-fluid
                             .row      
                                 each img, i in imgList
